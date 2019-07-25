@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MyFirstMVC.Models.Project>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Projelerim</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="col-12">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4">
+                            <div class="card d-block" style="height:380px;">
+                                <img src="~/images/@item.Photo" class="card-img-top" alt="Hastane Randevu">
+                                <div class="card-body">
+                                    <h5 class="card-title">@item.Title</h5>
+                                    <p class="card-text">@item.Description</p>
+                                    <a href="#" class="btn btn-primary" style="position:absolute;bottom:10px;right:15px;">Ayrıntılar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+             @if (Model.Count()==0)
+             {
+                 <div class="col-md-12">
+                     <div class="alert alert-danger">Hiç Proje Yok!</div>
+                 </div>
+             }
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
