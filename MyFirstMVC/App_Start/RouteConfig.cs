@@ -18,6 +18,7 @@ namespace MyFirstMVC
             routes.MapRoute("projelerRoute", "projeler", new { controller = "Home", action = "Project" }, namespaces: new string[] { "MyFirstMVC.Controllers" });
             routes.MapRoute("iletisimRoute", "iletisim", new { controller = "Home", action = "Contact" }, namespaces: new string[] { "MyFirstMVC.Controllers" });
             routes.MapRoute("hakkımızdaRoute", "hakkımızda", new { controller = "Home", action = "About" }, namespaces: new string[] { "MyFirstMVC.Controllers" });
+            
             //kullanım koşulları ve gizlilik politikası eklenecek kvkk nın oraya.
 
             routes.MapRoute(
