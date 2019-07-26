@@ -79,7 +79,7 @@
                 @if (!string.IsNullOrEmpty(Model.Photo))
                 {
                     <img src="~/Uploads/@Model.Photo" style="width:100px" />
-                    <input type="checkbox" name="Sil" value="1" />
+                    <input type="checkbox" name="Sil" value="1"/><label>Fotoğrafı Sil</label>
                 }
                 <input type="file" name="Upload" id="upload" class="form-control" />
             </div>
